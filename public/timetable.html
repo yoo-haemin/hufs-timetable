@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>time table</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+    <link href="timetable.css" rel="stylesheet"> 
+    <script src="timetable.js"></script>
+
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="side_nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="검색">
+                </div>
+                <a href="#" class="btn btn-default btn-sm" type="submit">
+                <span class="glyphicon glyphicon-search"></span> Search 
+                </a>
+            </form>
+            <div class="dropdown">
+                <button class="w3-bar-item w3-button dropdown-toggle" data-toggle="dropdown">전공
+                <span class="caret"></span></button>
+                <div class="dropdown-menu">
+                    <form action="">
+                        <input type="checkbox" name="major" value="CORE글로벌지역학">CORE글로벌지역학
+                        <input type="checkbox" name="major" value="EICC학과">EICC학과 
+                        <input type="checkbox" name="major" value="EU전공">EU전공<br>
+                        <input type="checkbox" name="major" value="LD학부">LD학부
+                        <input type="checkbox" name="major" value="LD전공">LD전공
+                        <input type="checkbox" name="major" value="LT학부">LT학부
+                        <input type="checkbox" name="major" value="LT전공">LT전공<br>
+                        <input type="checkbox" name="major" value="경영학부">경영학부
+                        <input type="checkbox" name="major" value="경영학전공">경영학전공
+                        <input type="checkbox" name="major" value="경제학부">경제학부<br>
+                        <input type="checkbox" name="major" value="경제학전공">경제학전공
+                        <input type="checkbox" name="major" value="광고·PR·브랜딩전공">광고·PR·브랜딩전공<br>
+                        <input type="checkbox" name="major" value="교육학">교육학
+                        <input type="checkbox" name="major" value="국가리더전공">국가리더전공
+                        <input type="checkbox" name="major" value="국제통상학과">국제통상학과<br>
+                        <input type="checkbox" name="major" value="국제학부">국제학부
+                        <input type="checkbox" name="major" value="국제학전공">국제학전공
+                        <input type="checkbox" name="major" value="네덜란드어과">네덜란드어과<br>
+                        <input type="checkbox" name="major" value="노어과">노어과
+                        <input type="checkbox" name="major" value="독일어과">독일어과
+                        <input type="checkbox" name="major" value="독일어교육과">독일어교육과<br>
+                        
+                        
+                        <input type="checkbox" name="major" value="말레이·인도네시아어과">말레이·인도네시아어과
+                        <input type="checkbox" name="major" value="몽골어과">몽골어과<br>
+                        <input type="checkbox" name="major" value="미디어커뮤니케이션학부">미디어커뮤니케이션학부<br>
+                        <input type="checkbox" name="major" value="방송·영상·뉴미디어전공">방송·영상·뉴미디어전공
+                        <input type="checkbox" name="major" value="법학과">법학과<br>
+                        <input type="checkbox" name="major" value="베트남어과">베트남어과
+                        <input type="checkbox" name="major" value="브릭스전공">브릭스전공
+                        <input type="checkbox" name="major" value="사학과">사학과<br>
+                        <input type="checkbox" name="major" value="사회과학전공">사회과학전공
+                        <input type="checkbox" name="major" value="세계문화예술경영전공">세계문화예술경영전공<br>
+                        <input type="checkbox" name="major" value="스칸디나비아어과">스칸디나비아어과
+                        <input type="checkbox" name="major" value="스페인어과">스페인어과
+                        <input type="checkbox" name="major" value="아랍어과">아랍어과<br>
+                        <input type="checkbox" name="major" value="언론·정보전공">언론·정보전공
+                        <input type="checkbox" name="major" value="언어와공학전공">언어와공학전공<br>
+                        <input type="checkbox" name="major" value="언어인지과학과">언어인지과학과
+                        <input type="checkbox" name="major" value="영미문학·문화학과">영미문학·문화학과<br>
+                        <input type="checkbox" name="major" value="영어교육과">영어교육과
+
+                        <input type="checkbox" name="major" value="영어전공">영어전공
+                        <input type="checkbox" name="major" value="영어학과">영어학과<br>
+                        <input type="checkbox" name="major" value="외국어로서의한국어교육전공">외국어로서의한국어교육전공<br>
+                        <input type="checkbox" name="major" value="융복합소프트웨어전공">융복합소프트웨어전공
+                        <input type="checkbox" name="major" value="융합일본지역전공">융합일본지역전공
+                        <input type="checkbox" name="major" value="융합일본지역학부">융합일본지역학부
+                        <input type="checkbox" name="major" value="이란어과">이란어과<br>
+                        <input type="checkbox" name="major" value="이탈리아어과">이탈리아어과
+                        <input type="checkbox" name="major" value="인도어과">인도어과<br>
+                        <input type="checkbox" name="major" value="일본언어문화전공">일본언어문화전공
+                        <input type="checkbox" name="major" value="일본언어문화학부">일본언어문화학부<br>
+                        <input type="checkbox" name="major" value="정치외교학과">정치외교학과
+                        <input type="checkbox" name="major" value="중국어교육과">중국어교육과<br>
+                        <input type="checkbox" name="major" value="중국언어문화전공">중국언어문화전공
+                        <input type="checkbox" name="major" value="중국언어문화학부">중국언어문화학부<br>
+                        <input type="checkbox" name="major" value="중국외교통상전공">중국외교통상전공                        
+                        <input type="checkbox" name="major" value="중국외교통상학부">중국외교통상학부<br>
+                        <input type="checkbox" name="major" value="철학과">철학과 
+                        <input type="checkbox" name="major" value="태국어과">태국어과 <br>
+                        <input type="checkbox" name="major" value="터키·아제르바이잔어과">터키·아제르바이잔어과
+                        <input type="checkbox" name="major" value="포르투갈어과">포르투갈어과 <br>
+                        <input type="checkbox" name="major" value="프랑스어과">프랑스어과 
+                        <input type="checkbox" name="major" value="프랑스어교육과">프랑스어교육과 <br>
+                        <input type="checkbox" name="major" value="프랑스어학부">프랑스어학부 
+                        <input type="checkbox" name="major" value="한국어교육과">한국어교육과 
+                        <input type="checkbox" name="major" value="행정학과">행정학과 
+                    </form>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w3-bar-item w3-button dropdown-toggle" data-toggle="dropdown">교양
+                <span class="caret"></span></button>
+                <div class="dropdown-menu">
+                    <form action="">
+                        <input type="checkbox" name="general" value="인문강좌">인문강좌
+                        <input type="checkbox" name="general" value="교양외국어">교양외국어
+                        <input type="checkbox" name="general" value="HUFSCAREER">HUFSCAREER<br>
+                        <input type="checkbox" name="general" value="학습포트폴리오">학습포트폴리오 
+                        <input type="checkbox" name="general" value="특별교양">특별교양
+                        <input type="checkbox" name="general" value="실용외국어">실용외국어<br>
+                        <input type="checkbox" name="general" value="외국인을위한한국학">외국인을위한한국학 
+                        <input type="checkbox" name="general" value="언어와문학">언어와문학 <br>               
+                        <input type="checkbox" name="general" value="문화와예술">문화와예술
+                        <input type="checkbox" name="general" value="역사와철학">역사와철학
+                        <input type="checkbox" name="general" value="국가와사회">국가와사회<br>
+                        <input type="checkbox" name="general" value="과학과기술">과학과기술                   
+                        <input type="checkbox" name="general" value="핵심인문기초">핵심인문기초
+                        <input type="checkbox" name="general" value="군사학">군사학<br>
+                        <input type="checkbox" name="general" value="건강과레포츠">건강과레포츠
+                        <input type="checkbox" name="general" value="공동교양(한예종)">공동교양(한예종) 
+                    </form>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="w3-bar-item w3-button dropdown-toggle" data-toggle="dropdown">포함시간</button>
+                    <select name="wanted_day">
+                        <option selected value="전체">전체</option> 
+                        <option value="월요일">월요일</option>
+                        <option value="화요일">화요일</option>
+                        <option value="수요일">수요일</option>
+                        <option value="목요일">목요일</option>
+                        <option value="금요일">금요일</option>
+                        <option value="토요일">토요일</option>
+                    </select>
+                    <select name="wanted_time">
+                        <option value="1교시">1교시</option>
+                        <option value="2교시">2교시</option>
+                        <option value="3교시">3교시</option>
+                        <option value="4교시">4교시</option>
+                        <option value="5교시">5교시</option>
+                        <option value="6교시">6교시</option>
+                        <option value="7교시">7교시</option>
+                        <option value="8교시">8교시</option>
+                        <option value="9교시">9교시</option>
+                        <option value="10교시">10교시</option>
+                        <option value="11교시">11교시</option>
+                        <option value="12교시">12교시</option>
+                    </select>
+                </div>
+            <div class="dropdown">
+                <button class="w3-bar-item w3-button dropdown-toggle" data-toggle="dropdown">미포함시간</button>
+                    <select name="unwanted_day">
+                        <option selected value="전체">전체</option> 
+                        <option value="월요일">월요일</option>
+                        <option value="화요일">화요일</option>
+                        <option value="수요일">수요일</option>
+                        <option value="목요일">목요일</option>
+                        <option value="금요일">금요일</option>
+                        <option value="토요일">토요일</option>
+                    </select>
+                    <select name="unwanted_time">
+                        <option value="1교시">1교시</option>
+                        <option value="2교시">2교시</option>
+                        <option value="3교시">3교시</option>
+                        <option value="4교시">4교시</option>
+                        <option value="5교시">5교시</option>
+                        <option value="6교시">6교시</option>
+                        <option value="7교시">7교시</option>
+                        <option value="8교시">8교시</option>
+                        <option value="9교시">9교시</option>
+                        <option value="10교시">10교시</option>
+                        <option value="11교시">11교시</option>
+                        <option value="12교시">12교시</option>
+                    </select>
+                </div>
+    </div>
+    <button class="w3-button w3-teal w3-xlarge" onclick="openSideNav()">&#9776;</button>
+    <div class="container">
+
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>전공</th>
+                            <th>학년</th>
+                            <th>교수명</th>
+                            <th>시간</th>
+                            <th style="width: 100px">담기</th>
+                        </tr>
+                        <tr>
+                            <th>------</th>
+                            <th>------</th>
+                            <th>------</th>
+                            <th>------</th>
+                            <th><button class="btn-default">담기</button></th>
+                        </tr>
+                    </table>
+    </div>
+
+</body>
+

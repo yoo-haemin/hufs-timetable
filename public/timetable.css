@@ -1,0 +1,53 @@
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    height: 50px;
+}
+
+.topnav{
+    text-align: right;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+.dropdown-menu{
+    background-color:black; 
+    width:320px; 
+    padding: 15px;
+}
+
+select{
+    background-color:black; 
+    width: 100px; 
+    height: 40px;
+    font-size: 10pt;
+    vertical-align: text-bottom;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+option{
+    background-color:black;  
+    padding: 15px;
+    font-size: 10pt;
+    margin: 15pt;
+    
+}
+
+#side_nav{
+    padding-top: 15px;
+}
+
+th{
+    text-align: center;
+    width: auto;
+}
